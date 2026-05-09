@@ -1,0 +1,8 @@
+.venv/
+.env
+postgres_data/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+assets/dashboard_screenshot.jpg

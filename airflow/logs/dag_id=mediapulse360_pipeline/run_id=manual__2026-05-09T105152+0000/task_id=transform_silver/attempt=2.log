@@ -1,0 +1,108 @@
+[2026-05-09T10:57:22.523+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mediapulse360_pipeline.transform_silver manual__2026-05-09T10:51:52+00:00 [queued]>
+[2026-05-09T10:57:22.532+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mediapulse360_pipeline.transform_silver manual__2026-05-09T10:51:52+00:00 [queued]>
+[2026-05-09T10:57:22.533+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2026-05-09T10:57:22.547+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_silver> on 2026-05-09 10:51:52+00:00
+[2026-05-09T10:57:22.567+0000] {standard_task_runner.py:60} INFO - Started process 774 to run task
+[2026-05-09T10:57:22.571+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mediapulse360_pipeline', 'transform_silver', 'manual__2026-05-09T10:51:52+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/mediapulse360_pipeline.py', '--cfg-path', '/tmp/tmpi8cjw9ub']
+[2026-05-09T10:57:22.575+0000] {standard_task_runner.py:88} INFO - Job 23: Subtask transform_silver
+[2026-05-09T10:57:22.651+0000] {task_command.py:423} INFO - Running <TaskInstance: mediapulse360_pipeline.transform_silver manual__2026-05-09T10:51:52+00:00 [running]> on host c8097e4ba7d4
+[2026-05-09T10:57:22.757+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mediapulse360_pipeline' AIRFLOW_CTX_TASK_ID='transform_silver' AIRFLOW_CTX_EXECUTION_DATE='2026-05-09T10:51:52+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-09T10:51:52+00:00'
+[2026-05-09T10:57:22.760+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-09T10:57:22.763+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python -m pip install --quiet --target /tmp/***_deps minio feedparser && export PYTHONPATH=/tmp/***_deps:$PYTHONPATH && cd /opt/project && python -c "from scripts.pipeline import transform_silver; print(transform_silver())"']
+[2026-05-09T10:57:22.780+0000] {subprocess.py:86} INFO - Output:
+[2026-05-09T10:57:29.030+0000] {subprocess.py:93} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2026-05-09T10:57:29.031+0000] {subprocess.py:93} INFO - botocore 1.33.13 requires urllib3<2.1,>=1.25.4; python_version >= "3.10", but you have urllib3 2.7.0 which is incompatible.
+[2026-05-09T10:57:29.033+0000] {subprocess.py:93} INFO - snowflake-connector-python 3.6.0 requires cffi<2.0.0,>=1.9, but you have cffi 2.0.0 which is incompatible.
+[2026-05-09T10:57:29.034+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/Crypto already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.035+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3 already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.036+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions-4.15.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.036+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycryptodome-3.23.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.037+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.037+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.038+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi_bindings-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.038+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3-2.7.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.039+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.040+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser-3.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.040+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.041+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib3k-1.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.041+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2 already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.042+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/__pycache__ already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.042+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_argon2_cffi_bindings already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.043+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi-2.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.043+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_cffi_backend.cpython-311-x86_64-linux-gnu.so already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.044+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi-2026.4.22.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.044+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.045+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser-6.0.12.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.045+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.046+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.046+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.047+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio-7.2.20.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:57:29.323+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:57:29.323+0000] {subprocess.py:93} INFO - [notice] A new release of pip is available: 23.3.2 -> 26.1.1
+[2026-05-09T10:57:29.324+0000] {subprocess.py:93} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2026-05-09T10:57:30.481+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:=== SILVER LAYER: CLEANING & NORMALIZATION ===
+[2026-05-09T10:57:30.573+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Bucket already exists: bronze-articles
+[2026-05-09T10:57:30.574+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Bucket already exists: silver-articles
+[2026-05-09T10:57:30.575+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Bucket already exists: gold-analytics
+[2026-05-09T10:57:30.598+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Processing 52 articles for Silver layer
+[2026-05-09T10:57:30.704+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Uploaded articles_cleaned_20260509_105730.parquet to Silver layer (52 rows)
+[2026-05-09T10:57:30.709+0000] {subprocess.py:93} INFO - ERROR:scripts.pipeline:Silver transformation failed: (psycopg2.errors.FeatureNotSupported) cannot truncate a table referenced in a foreign key constraint
+[2026-05-09T10:57:30.710+0000] {subprocess.py:93} INFO - DETAIL:  Table "transformation_audit" references "articles_silver".
+[2026-05-09T10:57:30.711+0000] {subprocess.py:93} INFO - HINT:  Truncate table "transformation_audit" at the same time, or use TRUNCATE ... CASCADE.
+[2026-05-09T10:57:30.712+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:57:30.712+0000] {subprocess.py:93} INFO - [SQL: TRUNCATE TABLE articles_silver]
+[2026-05-09T10:57:30.713+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/tw8g)
+[2026-05-09T10:57:30.714+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-09T10:57:30.715+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-09T10:57:30.715+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-09T10:57:30.716+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-09T10:57:30.716+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-09T10:57:30.717+0000] {subprocess.py:93} INFO - psycopg2.errors.FeatureNotSupported: cannot truncate a table referenced in a foreign key constraint
+[2026-05-09T10:57:30.719+0000] {subprocess.py:93} INFO - DETAIL:  Table "transformation_audit" references "articles_silver".
+[2026-05-09T10:57:30.719+0000] {subprocess.py:93} INFO - HINT:  Truncate table "transformation_audit" at the same time, or use TRUNCATE ... CASCADE.
+[2026-05-09T10:57:30.720+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:57:30.720+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:57:30.721+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-05-09T10:57:30.721+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:57:30.722+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-09T10:57:30.722+0000] {subprocess.py:93} INFO -   File "<string>", line 1, in <module>
+[2026-05-09T10:57:30.722+0000] {subprocess.py:93} INFO -   File "/opt/project/scripts/pipeline.py", line 195, in transform_silver
+[2026-05-09T10:57:30.723+0000] {subprocess.py:93} INFO -     conn.execute(sa.text("TRUNCATE TABLE articles_silver"))
+[2026-05-09T10:57:30.723+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+[2026-05-09T10:57:30.724+0000] {subprocess.py:93} INFO -     return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+[2026-05-09T10:57:30.724+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-09T10:57:30.725+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+[2026-05-09T10:57:30.725+0000] {subprocess.py:93} INFO -     return connection._execute_clauseelement(
+[2026-05-09T10:57:30.726+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-09T10:57:30.726+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+[2026-05-09T10:57:30.727+0000] {subprocess.py:93} INFO -     ret = self._execute_context(
+[2026-05-09T10:57:30.727+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-09T10:57:30.727+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+[2026-05-09T10:57:30.728+0000] {subprocess.py:93} INFO -     self._handle_dbapi_exception(
+[2026-05-09T10:57:30.728+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+[2026-05-09T10:57:30.729+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-05-09T10:57:30.729+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-09T10:57:30.729+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-09T10:57:30.730+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-09T10:57:30.731+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-09T10:57:30.731+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-09T10:57:30.732+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-09T10:57:30.733+0000] {subprocess.py:93} INFO - sqlalchemy.exc.NotSupportedError: (psycopg2.errors.FeatureNotSupported) cannot truncate a table referenced in a foreign key constraint
+[2026-05-09T10:57:30.734+0000] {subprocess.py:93} INFO - DETAIL:  Table "transformation_audit" references "articles_silver".
+[2026-05-09T10:57:30.736+0000] {subprocess.py:93} INFO - HINT:  Truncate table "transformation_audit" at the same time, or use TRUNCATE ... CASCADE.
+[2026-05-09T10:57:30.736+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:57:30.736+0000] {subprocess.py:93} INFO - [SQL: TRUNCATE TABLE articles_silver]
+[2026-05-09T10:57:30.737+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/tw8g)
+[2026-05-09T10:57:30.873+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-09T10:57:30.885+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-09T10:57:30.889+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=mediapulse360_pipeline, task_id=transform_silver, execution_date=20260509T105152, start_date=20260509T105722, end_date=20260509T105730
+[2026-05-09T10:57:30.913+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 23 for task transform_silver (Bash command failed. The command returned a non-zero exit code 1.; 774)
+[2026-05-09T10:57:30.952+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-09T10:57:30.972+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

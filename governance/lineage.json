@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-05-07T14:01:04.661113+00:00",
+  "pipelines": [
+    {
+      "name": "news_pipeline",
+      "source": "RSS + Web Scraping",
+      "layers": {
+        "bronze": "/opt/project/data_lake/bronze",
+        "silver": "/opt/project/data_lake/silver/articles_silver.parquet",
+        "gold": "/opt/project/data_lake/gold",
+        "warehouse": "postgres.news_dw"
+      }
+    }
+  ]
+}

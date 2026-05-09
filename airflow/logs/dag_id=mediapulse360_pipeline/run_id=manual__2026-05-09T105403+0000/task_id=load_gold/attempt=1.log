@@ -1,0 +1,113 @@
+[2026-05-09T10:59:47.845+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mediapulse360_pipeline.load_gold manual__2026-05-09T10:54:03+00:00 [queued]>
+[2026-05-09T10:59:47.855+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mediapulse360_pipeline.load_gold manual__2026-05-09T10:54:03+00:00 [queued]>
+[2026-05-09T10:59:47.856+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-05-09T10:59:47.900+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): load_gold> on 2026-05-09 10:54:03+00:00
+[2026-05-09T10:59:47.906+0000] {standard_task_runner.py:60} INFO - Started process 971 to run task
+[2026-05-09T10:59:47.915+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mediapulse360_pipeline', 'load_gold', 'manual__2026-05-09T10:54:03+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/mediapulse360_pipeline.py', '--cfg-path', '/tmp/tmpwoevvgzi']
+[2026-05-09T10:59:47.918+0000] {standard_task_runner.py:88} INFO - Job 29: Subtask load_gold
+[2026-05-09T10:59:47.983+0000] {task_command.py:423} INFO - Running <TaskInstance: mediapulse360_pipeline.load_gold manual__2026-05-09T10:54:03+00:00 [running]> on host c8097e4ba7d4
+[2026-05-09T10:59:48.063+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mediapulse360_pipeline' AIRFLOW_CTX_TASK_ID='load_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-05-09T10:54:03+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-09T10:54:03+00:00'
+[2026-05-09T10:59:48.064+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-09T10:59:48.065+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python -m pip install --quiet --target /tmp/***_deps minio feedparser && export PYTHONPATH=/tmp/***_deps:$PYTHONPATH && cd /opt/project && python -c "from scripts.pipeline import load_gold; print(load_gold())"']
+[2026-05-09T10:59:48.076+0000] {subprocess.py:86} INFO - Output:
+[2026-05-09T10:59:56.593+0000] {subprocess.py:93} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2026-05-09T10:59:56.594+0000] {subprocess.py:93} INFO - botocore 1.33.13 requires urllib3<2.1,>=1.25.4; python_version >= "3.10", but you have urllib3 2.7.0 which is incompatible.
+[2026-05-09T10:59:56.595+0000] {subprocess.py:93} INFO - snowflake-connector-python 3.6.0 requires cffi<2.0.0,>=1.9, but you have cffi 2.0.0 which is incompatible.
+[2026-05-09T10:59:56.595+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/Crypto already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.595+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3 already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.595+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions-4.15.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.596+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycryptodome-3.23.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.596+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.596+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.596+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi_bindings-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.597+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3-2.7.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.597+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.597+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser-3.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.598+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.598+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib3k-1.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.598+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2 already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.599+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/__pycache__ already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.599+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_argon2_cffi_bindings already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.599+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi-2.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.600+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_cffi_backend.cpython-311-x86_64-linux-gnu.so already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.600+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi-2026.4.22.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.600+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.601+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser-6.0.12.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.601+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.601+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.602+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.602+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio-7.2.20.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T10:59:56.768+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:59:56.769+0000] {subprocess.py:93} INFO - [notice] A new release of pip is available: 23.3.2 -> 26.1.1
+[2026-05-09T10:59:56.769+0000] {subprocess.py:93} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2026-05-09T10:59:57.980+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:=== GOLD LAYER: ANALYTICAL AGGREGATION ===
+[2026-05-09T10:59:58.060+0000] {subprocess.py:93} INFO - ERROR:scripts.pipeline:Gold loading failed: (psycopg2.errors.UndefinedColumn) column "last_updated" of relation "articles_by_source" does not exist
+[2026-05-09T10:59:58.061+0000] {subprocess.py:93} INFO - LINE 2: ... INTO articles_by_source (source, articles_count, last_updat...
+[2026-05-09T10:59:58.062+0000] {subprocess.py:93} INFO -                                                              ^
+[2026-05-09T10:59:58.063+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:59:58.064+0000] {subprocess.py:93} INFO - [SQL:
+[2026-05-09T10:59:58.065+0000] {subprocess.py:93} INFO -             INSERT INTO articles_by_source (source, articles_count, last_updated)
+[2026-05-09T10:59:58.066+0000] {subprocess.py:93} INFO -             SELECT source, COUNT(*) as articles_count, MAX(published_at) as last_updated
+[2026-05-09T10:59:58.067+0000] {subprocess.py:93} INFO -             FROM articles_detail
+[2026-05-09T10:59:58.068+0000] {subprocess.py:93} INFO -             GROUP BY source
+[2026-05-09T10:59:58.068+0000] {subprocess.py:93} INFO -             ]
+[2026-05-09T10:59:58.070+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/f405)
+[2026-05-09T10:59:58.070+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-09T10:59:58.073+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-09T10:59:58.075+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-09T10:59:58.075+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-09T10:59:58.077+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-09T10:59:58.078+0000] {subprocess.py:93} INFO - psycopg2.errors.UndefinedColumn: column "last_updated" of relation "articles_by_source" does not exist
+[2026-05-09T10:59:58.080+0000] {subprocess.py:93} INFO - LINE 2: ... INTO articles_by_source (source, articles_count, last_updat...
+[2026-05-09T10:59:58.082+0000] {subprocess.py:93} INFO -                                                              ^
+[2026-05-09T10:59:58.085+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:59:58.088+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:59:58.089+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-05-09T10:59:58.090+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:59:58.092+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-09T10:59:58.094+0000] {subprocess.py:93} INFO -   File "<string>", line 1, in <module>
+[2026-05-09T10:59:58.097+0000] {subprocess.py:93} INFO -   File "/opt/project/scripts/pipeline.py", line 227, in load_gold
+[2026-05-09T10:59:58.101+0000] {subprocess.py:93} INFO -     conn.execute(sa.text(query_source))
+[2026-05-09T10:59:58.101+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+[2026-05-09T10:59:58.103+0000] {subprocess.py:93} INFO -     return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+[2026-05-09T10:59:58.104+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-09T10:59:58.108+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+[2026-05-09T10:59:58.109+0000] {subprocess.py:93} INFO -     return connection._execute_clauseelement(
+[2026-05-09T10:59:58.111+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-09T10:59:58.112+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+[2026-05-09T10:59:58.113+0000] {subprocess.py:93} INFO -     ret = self._execute_context(
+[2026-05-09T10:59:58.113+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-09T10:59:58.114+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+[2026-05-09T10:59:58.117+0000] {subprocess.py:93} INFO -     self._handle_dbapi_exception(
+[2026-05-09T10:59:58.118+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+[2026-05-09T10:59:58.120+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-05-09T10:59:58.123+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-09T10:59:58.125+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-09T10:59:58.126+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-09T10:59:58.127+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-09T10:59:58.129+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-09T10:59:58.131+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-09T10:59:58.132+0000] {subprocess.py:93} INFO - sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "last_updated" of relation "articles_by_source" does not exist
+[2026-05-09T10:59:58.133+0000] {subprocess.py:93} INFO - LINE 2: ... INTO articles_by_source (source, articles_count, last_updat...
+[2026-05-09T10:59:58.135+0000] {subprocess.py:93} INFO -                                                              ^
+[2026-05-09T10:59:58.139+0000] {subprocess.py:93} INFO - 
+[2026-05-09T10:59:58.142+0000] {subprocess.py:93} INFO - [SQL:
+[2026-05-09T10:59:58.143+0000] {subprocess.py:93} INFO -             INSERT INTO articles_by_source (source, articles_count, last_updated)
+[2026-05-09T10:59:58.145+0000] {subprocess.py:93} INFO -             SELECT source, COUNT(*) as articles_count, MAX(published_at) as last_updated
+[2026-05-09T10:59:58.146+0000] {subprocess.py:93} INFO -             FROM articles_detail
+[2026-05-09T10:59:58.149+0000] {subprocess.py:93} INFO -             GROUP BY source
+[2026-05-09T10:59:58.152+0000] {subprocess.py:93} INFO -             ]
+[2026-05-09T10:59:58.153+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/f405)
+[2026-05-09T10:59:58.223+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-09T10:59:58.235+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-09T10:59:58.240+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=mediapulse360_pipeline, task_id=load_gold, execution_date=20260509T105403, start_date=20260509T105947, end_date=20260509T105958
+[2026-05-09T10:59:58.266+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 29 for task load_gold (Bash command failed. The command returned a non-zero exit code 1.; 971)
+[2026-05-09T10:59:58.306+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-09T10:59:58.330+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,49 @@
+[2026-05-09T11:03:29.903+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mediapulse360_pipeline.generate_metrics manual__2026-05-09T10:57:39+00:00 [queued]>
+[2026-05-09T11:03:29.913+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mediapulse360_pipeline.generate_metrics manual__2026-05-09T10:57:39+00:00 [queued]>
+[2026-05-09T11:03:29.915+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-05-09T11:03:29.929+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): generate_metrics> on 2026-05-09 10:57:39+00:00
+[2026-05-09T11:03:29.937+0000] {standard_task_runner.py:60} INFO - Started process 1657 to run task
+[2026-05-09T11:03:29.941+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mediapulse360_pipeline', 'generate_metrics', 'manual__2026-05-09T10:57:39+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/mediapulse360_pipeline.py', '--cfg-path', '/tmp/tmp3pvdpvqb']
+[2026-05-09T11:03:29.944+0000] {standard_task_runner.py:88} INFO - Job 55: Subtask generate_metrics
+[2026-05-09T11:03:30.008+0000] {task_command.py:423} INFO - Running <TaskInstance: mediapulse360_pipeline.generate_metrics manual__2026-05-09T10:57:39+00:00 [running]> on host c8097e4ba7d4
+[2026-05-09T11:03:30.110+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mediapulse360_pipeline' AIRFLOW_CTX_TASK_ID='generate_metrics' AIRFLOW_CTX_EXECUTION_DATE='2026-05-09T10:57:39+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-09T10:57:39+00:00'
+[2026-05-09T11:03:30.112+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-09T11:03:30.114+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python -m pip install --quiet --target /tmp/***_deps minio feedparser && export PYTHONPATH=/tmp/***_deps:$PYTHONPATH && cd /opt/project && python -c "from scripts.pipeline import generate_metrics; print(generate_metrics())"']
+[2026-05-09T11:03:30.134+0000] {subprocess.py:86} INFO - Output:
+[2026-05-09T11:03:36.390+0000] {subprocess.py:93} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2026-05-09T11:03:36.391+0000] {subprocess.py:93} INFO - botocore 1.33.13 requires urllib3<2.1,>=1.25.4; python_version >= "3.10", but you have urllib3 2.7.0 which is incompatible.
+[2026-05-09T11:03:36.392+0000] {subprocess.py:93} INFO - snowflake-connector-python 3.6.0 requires cffi<2.0.0,>=1.9, but you have cffi 2.0.0 which is incompatible.
+[2026-05-09T11:03:36.392+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/Crypto already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.392+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3 already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.393+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions-4.15.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.393+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycryptodome-3.23.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.393+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.394+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.394+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi_bindings-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.394+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3-2.7.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.395+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.395+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser-3.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.395+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.396+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib3k-1.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.396+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2 already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.396+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/__pycache__ already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.397+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_argon2_cffi_bindings already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.397+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi-2.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.397+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_cffi_backend.cpython-311-x86_64-linux-gnu.so already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.398+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi-2026.4.22.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.398+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.398+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser-6.0.12.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.398+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.399+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.400+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.401+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio-7.2.20.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:03:36.564+0000] {subprocess.py:93} INFO - 
+[2026-05-09T11:03:36.565+0000] {subprocess.py:93} INFO - [notice] A new release of pip is available: 23.3.2 -> 26.1.1
+[2026-05-09T11:03:36.566+0000] {subprocess.py:93} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2026-05-09T11:03:37.805+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:=== GENERATING METRICS ===
+[2026-05-09T11:03:37.818+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Metrics: {'total_articles': 95, 'articles_today': 35, 'quarantined_articles': 0, 'unique_sources': 4}
+[2026-05-09T11:03:37.819+0000] {subprocess.py:93} INFO - {'total_articles': 95, 'articles_today': 35, 'quarantined_articles': 0, 'unique_sources': 4}
+[2026-05-09T11:03:37.958+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-09T11:03:37.990+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mediapulse360_pipeline, task_id=generate_metrics, execution_date=20260509T105739, start_date=20260509T110329, end_date=20260509T110337
+[2026-05-09T11:03:38.040+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-09T11:03:38.056+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

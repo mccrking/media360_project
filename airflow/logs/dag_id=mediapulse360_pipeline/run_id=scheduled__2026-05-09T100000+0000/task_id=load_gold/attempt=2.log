@@ -1,0 +1,66 @@
+[2026-05-09T11:05:57.657+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mediapulse360_pipeline.load_gold scheduled__2026-05-09T10:00:00+00:00 [queued]>
+[2026-05-09T11:05:57.675+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mediapulse360_pipeline.load_gold scheduled__2026-05-09T10:00:00+00:00 [queued]>
+[2026-05-09T11:05:57.678+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2026-05-09T11:05:57.698+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): load_gold> on 2026-05-09 10:00:00+00:00
+[2026-05-09T11:05:57.705+0000] {standard_task_runner.py:60} INFO - Started process 1897 to run task
+[2026-05-09T11:05:57.712+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mediapulse360_pipeline', 'load_gold', 'scheduled__2026-05-09T10:00:00+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/mediapulse360_pipeline.py', '--cfg-path', '/tmp/tmp2sc_50ar']
+[2026-05-09T11:05:57.717+0000] {standard_task_runner.py:88} INFO - Job 65: Subtask load_gold
+[2026-05-09T11:05:57.846+0000] {task_command.py:423} INFO - Running <TaskInstance: mediapulse360_pipeline.load_gold scheduled__2026-05-09T10:00:00+00:00 [running]> on host c8097e4ba7d4
+[2026-05-09T11:05:58.081+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mediapulse360_pipeline' AIRFLOW_CTX_TASK_ID='load_gold' AIRFLOW_CTX_EXECUTION_DATE='2026-05-09T10:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-09T10:00:00+00:00'
+[2026-05-09T11:05:58.084+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-09T11:05:58.086+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python -m pip install --quiet --target /tmp/***_deps minio feedparser && export PYTHONPATH=/tmp/***_deps:$PYTHONPATH && cd /opt/project && python -c "from scripts.pipeline import load_gold; print(load_gold())"']
+[2026-05-09T11:05:58.108+0000] {subprocess.py:86} INFO - Output:
+[2026-05-09T11:06:06.669+0000] {subprocess.py:93} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2026-05-09T11:06:06.670+0000] {subprocess.py:93} INFO - botocore 1.33.13 requires urllib3<2.1,>=1.25.4; python_version >= "3.10", but you have urllib3 2.7.0 which is incompatible.
+[2026-05-09T11:06:06.670+0000] {subprocess.py:93} INFO - snowflake-connector-python 3.6.0 requires cffi<2.0.0,>=1.9, but you have cffi 2.0.0 which is incompatible.
+[2026-05-09T11:06:06.671+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/Crypto already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.671+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3 already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.671+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions-4.15.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.672+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycryptodome-3.23.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.672+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.673+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.673+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi_bindings-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.673+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3-2.7.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.674+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.675+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser-3.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.677+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.678+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib3k-1.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.679+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2 already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.680+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/__pycache__ already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.681+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_argon2_cffi_bindings already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.681+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi-2.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.682+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_cffi_backend.cpython-311-x86_64-linux-gnu.so already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.682+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi-2026.4.22.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.683+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.684+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser-6.0.12.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.684+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.685+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.685+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.686+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio-7.2.20.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T11:06:06.922+0000] {subprocess.py:93} INFO - 
+[2026-05-09T11:06:06.923+0000] {subprocess.py:93} INFO - [notice] A new release of pip is available: 23.3.2 -> 26.1.1
+[2026-05-09T11:06:06.924+0000] {subprocess.py:93} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2026-05-09T11:06:07.403+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2026-05-09T11:06:07.620+0000] {process_utils.py:131} INFO - Sending 15 to group 1897. PIDs of all processes in the group: [1898, 1897]
+[2026-05-09T11:06:07.621+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 1897
+[2026-05-09T11:06:07.622+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-05-09T11:06:07.624+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2026-05-09T11:06:07.689+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 203, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2026-05-09T11:06:07.715+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=mediapulse360_pipeline, task_id=load_gold, execution_date=20260509T100000, start_date=20260509T110557, end_date=20260509T110607
+[2026-05-09T11:06:07.824+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 65 for task load_gold (Task received SIGTERM signal; 1897)
+[2026-05-09T11:06:07.896+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1897, status='terminated', exitcode=1, started='11:05:57') (1897) terminated with exit code 1
+[2026-05-09T11:06:07.904+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1898, status='terminated', started='11:05:57') (1898) terminated with exit code None
+[2026-05-09T11:06:07.909+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2026-05-09T11:06:08.002+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

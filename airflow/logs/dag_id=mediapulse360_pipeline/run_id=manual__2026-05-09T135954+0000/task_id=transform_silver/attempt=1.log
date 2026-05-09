@@ -1,0 +1,58 @@
+[2026-05-09T14:00:15.111+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-09T14:00:15.134+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mediapulse360_pipeline.transform_silver manual__2026-05-09T13:59:54+00:00 [queued]>
+[2026-05-09T14:00:15.170+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mediapulse360_pipeline.transform_silver manual__2026-05-09T13:59:54+00:00 [queued]>
+[2026-05-09T14:00:15.172+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2026-05-09T14:00:15.184+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): transform_silver> on 2026-05-09 13:59:54+00:00
+[2026-05-09T14:00:15.190+0000] {standard_task_runner.py:72} INFO - Started process 696 to run task
+[2026-05-09T14:00:15.193+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'mediapulse360_pipeline', 'transform_silver', 'manual__2026-05-09T13:59:54+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/mediapulse360_pipeline.py', '--cfg-path', '/tmp/tmpvv0rn32z']
+[2026-05-09T14:00:15.196+0000] {standard_task_runner.py:105} INFO - Job 117: Subtask transform_silver
+[2026-05-09T14:00:15.272+0000] {task_command.py:467} INFO - Running <TaskInstance: mediapulse360_pipeline.transform_silver manual__2026-05-09T13:59:54+00:00 [running]> on host 8eea0feb297a
+[2026-05-09T14:00:15.390+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mediapulse360_pipeline' AIRFLOW_CTX_TASK_ID='transform_silver' AIRFLOW_CTX_EXECUTION_DATE='2026-05-09T13:59:54+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-09T13:59:54+00:00'
+[2026-05-09T14:00:15.392+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-05-09T14:00:15.431+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-09T14:00:15.433+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python -m pip install --quiet --target /tmp/***_deps minio feedparser && export PYTHONPATH=/tmp/***_deps:$PYTHONPATH && cd /opt/project && python -c "from scripts.pipeline import transform_silver; print(transform_silver())"']
+[2026-05-09T14:00:15.446+0000] {subprocess.py:86} INFO - Output:
+[2026-05-09T14:00:31.793+0000] {job.py:229} INFO - Heartbeat recovered after 11.56 seconds
+[2026-05-09T14:00:44.259+0000] {job.py:229} INFO - Heartbeat recovered after 18.30 seconds
+[2026-05-09T14:00:49.374+0000] {subprocess.py:93} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2026-05-09T14:00:49.376+0000] {subprocess.py:93} INFO - snowflake-connector-python 3.12.2 requires cffi<2.0.0,>=1.9, but you have cffi 2.0.0 which is incompatible.
+[2026-05-09T14:00:49.377+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/Crypto already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.378+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3 already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.380+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions-4.15.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.381+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycryptodome-3.23.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.382+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.383+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.384+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi_bindings-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.385+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/urllib3-2.7.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.387+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.387+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser-3.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.388+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/typing_extensions.py already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.389+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/sgmllib3k-1.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.391+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2 already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.392+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/__pycache__ already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.393+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_argon2_cffi_bindings already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.394+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi-2.0.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.394+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/_cffi_backend.cpython-311-x86_64-linux-gnu.so already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.395+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/certifi-2026.4.22.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.396+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/pycparser already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.397+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/feedparser-6.0.12.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.398+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/cffi already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.399+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.400+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/argon2_cffi-25.1.0.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.400+0000] {subprocess.py:93} INFO - WARNING: Target directory /tmp/***_deps/minio-7.2.20.dist-info already exists. Specify --upgrade to force replacement.
+[2026-05-09T14:00:49.426+0000] {subprocess.py:93} INFO - 
+[2026-05-09T14:00:49.427+0000] {subprocess.py:93} INFO - [notice] A new release of pip is available: 24.2 -> 26.1.1
+[2026-05-09T14:00:49.428+0000] {subprocess.py:93} INFO - [notice] To update, run: pip install --upgrade pip
+[2026-05-09T14:00:51.831+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:=== SILVER LAYER: CLEANING & NORMALIZATION ===
+[2026-05-09T14:00:52.541+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Bucket already exists: bronze-articles
+[2026-05-09T14:00:52.543+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Bucket already exists: silver-articles
+[2026-05-09T14:00:52.544+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Bucket already exists: gold-analytics
+[2026-05-09T14:00:52.604+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Processing 50 articles for Silver layer
+[2026-05-09T14:00:52.844+0000] {subprocess.py:93} INFO - INFO:scripts.pipeline:Uploaded articles_cleaned_20260509_140052.parquet to Silver layer (50 rows)
+[2026-05-09T14:00:52.895+0000] {subprocess.py:93} INFO - 50
+[2026-05-09T14:00:53.064+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-09T14:00:53.112+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-05-09T14:00:53.113+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=mediapulse360_pipeline, task_id=transform_silver, run_id=manual__2026-05-09T13:59:54+00:00, execution_date=20260509T135954, start_date=20260509T140015, end_date=20260509T140053
+[2026-05-09T14:00:53.156+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-05-09T14:00:53.204+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-05-09T14:00:53.217+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

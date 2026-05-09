@@ -1,0 +1,17 @@
+[2026-05-09T11:05:55.010+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mediapulse360_pipeline.data_quality_check manual__2026-05-09T10:59:40+00:00 [queued]>
+[2026-05-09T11:05:55.022+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mediapulse360_pipeline.data_quality_check manual__2026-05-09T10:59:40+00:00 [queued]>
+[2026-05-09T11:05:55.023+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 3
+[2026-05-09T11:05:55.040+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): data_quality_check> on 2026-05-09 10:59:40+00:00
+[2026-05-09T11:05:55.048+0000] {standard_task_runner.py:60} INFO - Started process 1871 to run task
+[2026-05-09T11:05:55.053+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mediapulse360_pipeline', 'data_quality_check', 'manual__2026-05-09T10:59:40+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/mediapulse360_pipeline.py', '--cfg-path', '/tmp/tmpdnwgl1a3']
+[2026-05-09T11:05:55.058+0000] {standard_task_runner.py:88} INFO - Job 64: Subtask data_quality_check
+[2026-05-09T11:05:55.172+0000] {task_command.py:423} INFO - Running <TaskInstance: mediapulse360_pipeline.data_quality_check manual__2026-05-09T10:59:40+00:00 [running]> on host c8097e4ba7d4
+[2026-05-09T11:05:55.321+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mediapulse360_pipeline' AIRFLOW_CTX_TASK_ID='data_quality_check' AIRFLOW_CTX_EXECUTION_DATE='2026-05-09T10:59:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-09T10:59:40+00:00'
+[2026-05-09T11:05:55.322+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-09T11:05:55.324+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/project && python -c "from scripts.quality import run_quality_checks; import json; print(json.dumps(run_quality_checks(), ensure_ascii=False))"']
+[2026-05-09T11:05:55.337+0000] {subprocess.py:86} INFO - Output:
+[2026-05-09T11:05:56.072+0000] {subprocess.py:93} INFO - {"timestamp": "2026-05-09T11:05:55.998370", "checks": [{"name": "articles_detail.title_null", "status": "PASS", "value": 0}, {"name": "articles_detail.author_null", "status": "WARN", "value": 26}, {"name": "articles_detail.content_null", "status": "WARN", "value": 46}, {"name": "orphaned_audit_records", "status": "PASS", "value": 0}, {"name": "invalid_dates", "status": "PASS", "value": 0}, {"name": "negative_lengths", "status": "PASS", "value": 0}, {"name": "invalid_scores", "status": "PASS", "value": 0}], "status": "PASS", "summary": {"total_checks": 7, "passed": 5, "failed": 2, "pass_rate": 71.42857142857143}}
+[2026-05-09T11:05:56.130+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-09T11:05:56.168+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mediapulse360_pipeline, task_id=data_quality_check, execution_date=20260509T105940, start_date=20260509T110555, end_date=20260509T110556
+[2026-05-09T11:05:56.232+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-05-09T11:05:56.265+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

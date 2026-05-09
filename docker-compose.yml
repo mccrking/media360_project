@@ -1,0 +1,197 @@
+services:
+  # Data Warehouse
+  postgres:
+    image: postgres:16
+    container_name: news_dw_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: news
+      POSTGRES_PASSWORD: news
+      POSTGRES_DB: news_dw
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init_dw.sql:/docker-entrypoint-initdb.d/init_dw.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U news"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Data Lake - MinIO
+  minio:
+    image: minio/minio:latest
+    container_name: news_data_lake
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/minio_data
+    command: server /minio_data --console-address ":9001"
+    restart: unless-stopped
+
+  # Airflow Metadata DB
+  airflow_db:
+    image: postgres:13
+    container_name: airflow_metadata_db
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow -d airflow -h localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    restart: unless-stopped
+
+  # Apache Airflow - Webserver
+  airflow_webserver:
+    build:
+      context: .
+      dockerfile: ./airflow/Dockerfile
+    container_name: airflow_webserver
+    ports:
+      - "8081:8080"
+    environment:
+      AIRFLOW_HOME: /opt/airflow
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__PLUGINS_FOLDER: /opt/airflow/plugins
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_db:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/config:/opt/airflow/config
+      - ./:/opt/project
+    depends_on:
+      airflow_db:
+        condition: service_healthy
+    command: bash -c "airflow db init && airflow users create --username admin --firstname Admin --lastname Admin --role Admin --email admin@airflow.local --password admin || true && airflow webserver"
+    restart: unless-stopped
+
+  # Apache Airflow - Scheduler
+  airflow_scheduler:
+    build:
+      context: .
+      dockerfile: ./airflow/Dockerfile
+    container_name: airflow_scheduler
+    environment:
+      AIRFLOW_HOME: /opt/airflow
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__PLUGINS_FOLDER: /opt/airflow/plugins
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_db:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/config:/opt/airflow/config
+      - ./:/opt/project
+    depends_on:
+      airflow_db:
+        condition: service_healthy
+    command: airflow scheduler
+    restart: unless-stopped
+
+  # Dashboard
+  streamlit:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    container_name: streamlit_app
+    env_file:
+      - .env
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./:/opt/project
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    restart: unless-stopped
+    environment:
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+
+  # Ingestion Service (managed by Airflow now, kept for backward compatibility)
+  ingest:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    container_name: ingest_service
+    env_file:
+      - .env
+    volumes:
+      - ./:/opt/project
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    command: /bin/bash -c "cd /opt/project && while true; do echo '[$(date \"%%Y-%%m-%%d %%H:%%M:%%S\")] Running ingestion...' && python scripts/run_batch_insert.py && echo '[$(date \"%%Y-%%m-%%d %%H:%%M:%%S\")] Ingestion done. Sleeping 5 minutes...' && sleep 300; done"
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  # Zookeeper (required for Kafka)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+      - zookeeper_logs:/var/lib/zookeeper/log
+    restart: unless-stopped
+
+  # Apache Kafka
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka_broker
+    depends_on:
+      zookeeper:
+        condition: service_started
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  minio_data:
+  airflow_db_data:
+  zookeeper_data:
+  zookeeper_logs:
+  kafka_data:
+
