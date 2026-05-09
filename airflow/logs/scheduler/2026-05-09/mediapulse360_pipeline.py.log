@@ -2312,3 +2312,122 @@ ImportError: cannot import name 'task' from 'airflow.utils.decorators' (/home/ai
 [2026-05-09T16:31:06.525+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:06.525+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-05-09T16:31:06.548+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:06.548+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
 [2026-05-09T16:31:06.573+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.122 seconds
+[2026-05-09T16:31:36.842+0000] {processor.py:186} INFO - Started process (PID=3709) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:31:36.844+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:31:36.846+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:36.846+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:31:36.869+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:31:36.903+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:36.903+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:31:36.929+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:36.928+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:31:36.949+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.118 seconds
+[2026-05-09T16:32:07.166+0000] {processor.py:186} INFO - Started process (PID=3719) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:32:07.168+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:32:07.170+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:07.169+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:32:07.191+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:32:07.263+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:07.262+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:32:07.284+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:07.284+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:32:07.308+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.149 seconds
+[2026-05-09T16:32:37.657+0000] {processor.py:186} INFO - Started process (PID=3729) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:32:37.662+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:32:37.665+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:37.664+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:32:37.685+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:32:37.722+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:37.721+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:32:37.748+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:37.748+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:32:37.779+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.133 seconds
+[2026-05-09T16:33:08.064+0000] {processor.py:186} INFO - Started process (PID=3739) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:33:08.066+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:33:08.069+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:08.068+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:33:08.097+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:33:08.136+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:08.136+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:33:08.162+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:08.161+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:33:08.188+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.132 seconds
+[2026-05-09T16:33:38.581+0000] {processor.py:186} INFO - Started process (PID=3749) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:33:38.583+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:33:38.588+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:38.587+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:33:38.616+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:33:38.657+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:38.656+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:33:38.691+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:38.691+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:33:38.729+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.158 seconds
+[2026-05-09T16:34:08.929+0000] {processor.py:186} INFO - Started process (PID=3759) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:34:08.931+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:34:08.934+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:08.934+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:34:08.962+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:34:09.021+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:09.021+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:34:09.066+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:09.066+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:34:09.112+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.193 seconds
+[2026-05-09T16:34:39.444+0000] {processor.py:186} INFO - Started process (PID=3769) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:34:39.445+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:34:39.448+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:39.447+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:34:39.470+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:34:39.510+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:39.509+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:34:39.535+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:39.535+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:34:39.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.118 seconds
+[2026-05-09T16:35:09.891+0000] {processor.py:186} INFO - Started process (PID=3779) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:35:09.893+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:35:09.894+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:09.894+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:35:09.908+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:35:09.934+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:09.934+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:35:09.954+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:09.954+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:35:09.986+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.100 seconds
+[2026-05-09T16:35:40.346+0000] {processor.py:186} INFO - Started process (PID=3789) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:35:40.347+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:35:40.349+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:40.349+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:35:40.367+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:35:40.394+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:40.393+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:35:40.414+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:40.414+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:35:40.436+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.096 seconds
+[2026-05-09T16:36:10.799+0000] {processor.py:186} INFO - Started process (PID=3799) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:36:10.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:36:10.803+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:10.802+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:36:10.825+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:36:10.859+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:10.858+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:36:10.886+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:10.886+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:36:10.906+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.115 seconds
+[2026-05-09T16:36:41.206+0000] {processor.py:186} INFO - Started process (PID=3809) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:36:41.207+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:36:41.208+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:41.208+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:36:41.225+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:36:41.252+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:41.252+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:36:41.271+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:41.271+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:36:41.294+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.094 seconds
+[2026-05-09T16:37:11.699+0000] {processor.py:186} INFO - Started process (PID=3819) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:37:11.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:37:11.702+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:11.701+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:37:11.721+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:37:11.746+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:11.746+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:37:11.766+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:11.766+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:37:11.787+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.095 seconds
+[2026-05-09T16:37:42.082+0000] {processor.py:186} INFO - Started process (PID=3829) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:37:42.083+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:37:42.085+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:42.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:37:42.105+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:37:42.140+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:42.139+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:37:42.161+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:42.161+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:37:42.185+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.110 seconds
+[2026-05-09T16:38:12.778+0000] {processor.py:186} INFO - Started process (PID=3839) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:38:12.780+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:38:12.784+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:12.783+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:38:12.813+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:38:12.870+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:12.869+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:38:12.900+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:12.900+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:38:12.922+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.154 seconds
+[2026-05-09T16:38:43.076+0000] {processor.py:186} INFO - Started process (PID=3849) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:38:43.077+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:38:43.079+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:43.079+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:38:43.099+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:38:43.130+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:43.129+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:38:43.157+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:43.157+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:38:43.189+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.120 seconds
+[2026-05-09T16:39:13.513+0000] {processor.py:186} INFO - Started process (PID=3859) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:39:13.514+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:39:13.517+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:13.516+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:39:13.540+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:39:13.568+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:13.568+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:39:13.588+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:13.588+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:39:13.614+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.111 seconds
+[2026-05-09T16:39:43.835+0000] {processor.py:186} INFO - Started process (PID=3869) to work on /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:39:43.836+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/mediapulse360_pipeline.py for tasks to queue
+[2026-05-09T16:39:43.838+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:43.837+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:39:43.882+0000] {processor.py:925} INFO - DAG(s) 'mediapulse360_pipeline' retrieved from /opt/airflow/dags/mediapulse360_pipeline.py
+[2026-05-09T16:39:43.914+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:43.913+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:39:43.943+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:43.942+0000] {dag.py:4180} INFO - Setting next_dagrun for mediapulse360_pipeline to 2026-05-09 16:00:00+00:00, run_after=2026-05-09 17:00:00+00:00
+[2026-05-09T16:39:43.974+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/mediapulse360_pipeline.py took 0.148 seconds

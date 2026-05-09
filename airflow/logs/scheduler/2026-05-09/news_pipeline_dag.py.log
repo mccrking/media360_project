@@ -2269,3 +2269,122 @@
 [2026-05-09T16:31:06.532+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:06.532+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-05-09T16:31:06.553+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:06.553+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
 [2026-05-09T16:31:06.579+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.112 seconds
+[2026-05-09T16:31:36.844+0000] {processor.py:186} INFO - Started process (PID=3712) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:31:36.845+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:31:36.847+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:36.847+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:31:36.869+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:31:36.903+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:36.903+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:31:36.926+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:31:36.926+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:31:36.946+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.109 seconds
+[2026-05-09T16:32:07.185+0000] {processor.py:186} INFO - Started process (PID=3722) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:32:07.187+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:32:07.188+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:07.188+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:32:07.247+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:32:07.280+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:07.279+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:32:07.304+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:07.303+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:32:07.327+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.150 seconds
+[2026-05-09T16:32:37.671+0000] {processor.py:186} INFO - Started process (PID=3732) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:32:37.673+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:32:37.675+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:37.674+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:32:37.698+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:32:37.732+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:37.731+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:32:37.757+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:32:37.756+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:32:37.780+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.117 seconds
+[2026-05-09T16:33:08.078+0000] {processor.py:186} INFO - Started process (PID=3742) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:33:08.080+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:33:08.082+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:08.081+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:33:08.112+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:33:08.148+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:08.147+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:33:08.175+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:08.175+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:33:08.206+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.137 seconds
+[2026-05-09T16:33:38.586+0000] {processor.py:186} INFO - Started process (PID=3752) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:33:38.587+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:33:38.589+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:38.589+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:33:38.614+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:33:38.660+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:38.659+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:33:38.697+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:33:38.697+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:33:38.729+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.152 seconds
+[2026-05-09T16:34:08.945+0000] {processor.py:186} INFO - Started process (PID=3762) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:34:08.947+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:34:08.949+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:08.949+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:34:08.993+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:34:09.051+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:09.050+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:34:09.089+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:09.088+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:34:09.142+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.206 seconds
+[2026-05-09T16:34:39.461+0000] {processor.py:186} INFO - Started process (PID=3772) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:34:39.462+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:34:39.464+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:39.463+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:34:39.492+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:34:39.526+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:39.526+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:34:39.548+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:34:39.548+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:34:39.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.118 seconds
+[2026-05-09T16:35:09.906+0000] {processor.py:186} INFO - Started process (PID=3782) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:35:09.907+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:35:09.909+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:09.909+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:35:09.923+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:35:09.950+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:09.950+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:35:09.971+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:09.970+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:35:09.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.090 seconds
+[2026-05-09T16:35:40.358+0000] {processor.py:186} INFO - Started process (PID=3792) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:35:40.359+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:35:40.360+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:40.360+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:35:40.378+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:35:40.402+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:40.402+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:35:40.423+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:35:40.422+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:35:40.442+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.090 seconds
+[2026-05-09T16:36:10.811+0000] {processor.py:186} INFO - Started process (PID=3802) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:36:10.812+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:36:10.814+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:10.813+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:36:10.834+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:36:10.864+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:10.864+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:36:10.889+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:10.889+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:36:10.909+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.105 seconds
+[2026-05-09T16:36:41.215+0000] {processor.py:186} INFO - Started process (PID=3812) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:36:41.216+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:36:41.217+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:41.217+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:36:41.237+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:36:41.262+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:41.262+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:36:41.284+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:36:41.284+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:36:41.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.097 seconds
+[2026-05-09T16:37:11.707+0000] {processor.py:186} INFO - Started process (PID=3822) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:37:11.709+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:37:11.710+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:11.710+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:37:11.725+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:37:11.748+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:11.748+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:37:11.768+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:11.767+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:37:11.790+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.089 seconds
+[2026-05-09T16:37:42.100+0000] {processor.py:186} INFO - Started process (PID=3832) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:37:42.101+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:37:42.104+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:42.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:37:42.128+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:37:42.157+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:42.157+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:37:42.191+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:37:42.191+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:37:42.214+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.123 seconds
+[2026-05-09T16:38:12.791+0000] {processor.py:186} INFO - Started process (PID=3842) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:38:12.796+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:38:12.799+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:12.798+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:38:12.818+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:38:12.859+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:12.858+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:38:12.889+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:12.888+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:38:12.922+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.138 seconds
+[2026-05-09T16:38:43.087+0000] {processor.py:186} INFO - Started process (PID=3852) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:38:43.088+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:38:43.090+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:43.090+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:38:43.112+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:38:43.153+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:43.153+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:38:43.179+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:38:43.179+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:38:43.209+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.130 seconds
+[2026-05-09T16:39:13.522+0000] {processor.py:186} INFO - Started process (PID=3862) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:39:13.525+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:39:13.527+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:13.526+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:39:13.546+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:39:13.574+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:13.573+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:39:13.594+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:13.594+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:39:13.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.099 seconds
+[2026-05-09T16:39:43.844+0000] {processor.py:186} INFO - Started process (PID=3872) to work on /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:39:43.858+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/news_pipeline_dag.py for tasks to queue
+[2026-05-09T16:39:43.860+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:43.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:39:43.885+0000] {processor.py:925} INFO - DAG(s) 'news_data_architecture_pipeline' retrieved from /opt/airflow/dags/news_pipeline_dag.py
+[2026-05-09T16:39:43.913+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:43.913+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-09T16:39:43.943+0000] {logging_mixin.py:190} INFO - [2026-05-09T16:39:43.943+0000] {dag.py:4180} INFO - Setting next_dagrun for news_data_architecture_pipeline to 2026-05-09 15:00:00+00:00, run_after=2026-05-09 16:00:00+00:00
+[2026-05-09T16:39:43.975+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/news_pipeline_dag.py took 0.136 seconds
